@@ -8,6 +8,10 @@ In order to challenge myself, I focused on a specific topic that isn't as straig
 My solution was to create a spreadsheet that had English Pokemon names in one column and Japanese Pokemon names in the other, to serve as a mapping between the two. I utilized [this list from Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/List_of_Japanese_Pok%C3%A9mon_names) when making the spreadsheet, and added a few extra names of well known characters. I then imported the spreadsheet into the notebook as a Pandas dataframe. 
 I tried two different approaches for using the mapping. For Japanese to English translation, I used a Japanese morphological analyzer called SudachiPy to identify proper nouns in sentences. If a given sentence contained a proper noun, I compared that proper noun to the list of Japanese Pokemon names in the Pandas dataframe. If the proper noun was in the list, I directly replaced it within the sentence with the English equivalent, then used Google Translate or DeepL to translate the entire sentence. For English to Japanese translation, I used a more basic approach of just comparing every word in the sentence to the list of English Pokemon names, then replacing with the Japanese names before translating the whole sentence.
 
+## Requirements
+
+googletrans, deepl, sudachipy, pandas, wikipedia, stanza
+
 ## How to use
 
 To run the Jupyter notebook and use the DeepL translator in the script, you'll need to request an API key [here](https://support.deepl.com/hc/en-us/articles/360020695820-API-Key-for-DeepL-s-API). It's a pretty quick process with no wait. 
